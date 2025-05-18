@@ -1,0 +1,818 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="BeforeBuild">
+    <MSBuild Projects="$(MSBuildProjectFile)" Targets="Clean" />
+  </Target>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ImGui|Win32">
+      <Configuration>ImGui</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ImGui|x64">
+      <Configuration>ImGui</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AD20B058-F676-48EF-9BAA-275E79B112D2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Client</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ImGui|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ImGui|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ImGui|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ImGui|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Output\</OutDir>
+    <IncludePath>$(DXSDK_DIR)Include\;$(SolutionDir)Engine\;$(SolutionDir)External\;$(SolutionDir)Client\stb\;$(SolutionDir)Client\imGui\;$(SolutionDir)Client\dirent\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)lib\x86\;$(SolutionDir)Output\;$(SolutionDir)External\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ImGui|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Output\</OutDir>
+    <IncludePath>$(DXSDK_DIR)Include\;$(SolutionDir)Engine\;$(SolutionDir)External\;$(SolutionDir)Client\stb\;$(SolutionDir)Client\imGui\;$(SolutionDir)Client\dirent\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)lib\x86\;$(SolutionDir)Output\;$(SolutionDir)External\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include\;$(SolutionDir)Engine\;$(SolutionDir)External\</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)lib\x86\;$(SolutionDir)Output\;$(SolutionDir)Engine\;$(SolutionDir)External\</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ImGui|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include\;$(SolutionDir)Engine\;$(SolutionDir)External\</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)lib\x86\;$(SolutionDir)Output\;$(SolutionDir)Engine\;$(SolutionDir)External\</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include\;$(SolutionDir)Engine\;$(SolutionDir)External\;$(SolutionDir)Client\stb\;$(SolutionDir)Client\imGui\;$(SolutionDir)Client\dirent\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)lib\x86\;$(SolutionDir)Output\;$(SolutionDir)External\;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)Output\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include\;$(SolutionDir)Engine\;$(SolutionDir)External\</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)lib\x86\;$(SolutionDir)Output\;$(SolutionDir)Engine\;$(SolutionDir)External\</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxguid.lib;dinput8.lib;Engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ImGui|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_IMGUI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxguid.lib;dinput8.lib;Engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxguid.lib;dinput8.lib;Engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ImGui|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxguid.lib;dinput8.lib;Engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxguid.lib;dinput8.lib;Engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxguid.lib;dinput8.lib;Engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Client.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Client.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Attack.h" />
+    <ClInclude Include="AttackToPlayer.h" />
+    <ClInclude Include="BackGround.h" />
+    <ClInclude Include="BackJump.h" />
+    <ClInclude Include="Baller.h" />
+    <ClInclude Include="BeltTile.h" />
+    <ClInclude Include="BigJump.h" />
+    <ClInclude Include="Bird.h" />
+    <ClInclude Include="BloodTile.h" />
+    <ClInclude Include="BoolCheck.h" />
+    <ClInclude Include="BossHp.h" />
+    <ClInclude Include="Bub.h" />
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="BulletBar.h" />
+    <ClInclude Include="BulletGauge.h" />
+    <ClInclude Include="BulletItem.h" />
+    <ClInclude Include="Cactus.h" />
+    <ClInclude Include="Cactus1.h" />
+    <ClInclude Include="Cactus2.h" />
+    <ClInclude Include="Cactus3.h" />
+    <ClInclude Include="Cactus4.h" />
+    <ClInclude Include="Cactus5.h" />
+    <ClInclude Include="Calculator.h" />
+    <ClInclude Include="CheckPoint.h" />
+    <ClInclude Include="Client.h" />
+    <ClInclude Include="Coin.h" />
+    <ClInclude Include="CoinItem.h" />
+    <ClInclude Include="CoolTime.h" />
+    <ClInclude Include="CrossHair.h" />
+    <ClInclude Include="CutSceneUI.h" />
+    <ClInclude Include="CutSceneCheck.h" />
+    <ClInclude Include="DeadCheck.h" />
+    <ClInclude Include="DecoratorTile.h" />
+    <ClInclude Include="EndingBackground.h" />
+    <ClInclude Include="FloorBeltCorner.h" />
+    <ClInclude Include="FloorLarge.h" />
+    <ClInclude Include="FloorLarge421204.h" />
+    <ClInclude Include="FloorLarge421409.h" />
+    <ClInclude Include="FloorLarge421559.h" />
+    <ClInclude Include="FloorLarge421721.h" />
+    <ClInclude Include="FloorLarge421865.h" />
+    <ClInclude Include="FloorLarge421871.h" />
+    <ClInclude Include="FloorLarge421874.h" />
+    <ClInclude Include="FloorStripes.h" />
+    <ClInclude Include="FloorVent.h" />
+    <ClInclude Include="FloorVent420959.h" />
+    <ClInclude Include="FloorVent421222.h" />
+    <ClInclude Include="FloorVent421406.h" />
+    <ClInclude Include="FloorVent421556.h" />
+    <ClInclude Include="FloorVent421725.h" />
+    <ClInclude Include="FloorVent421869.h" />
+    <ClInclude Include="Guppi.h" />
+    <ClInclude Include="ListBox.h" />
+    <ClInclude Include="Lizard.h" />
+    <ClInclude Include="LookAtPlayer.h" />
+    <ClInclude Include="MiniGuppi.h" />
+    <ClInclude Include="MoveUp.h" />
+    <ClInclude Include="MoveY.h" />
+    <ClInclude Include="Disc.h" />
+    <ClInclude Include="DiscItem.h" />
+    <ClInclude Include="Door.h" />
+    <ClInclude Include="EditCamera.h" />
+    <ClInclude Include="ElectricTile.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyBullet.h" />
+    <ClInclude Include="Evasioner.h" />
+    <ClInclude Include="Factory.h" />
+    <ClInclude Include="ExplosiveWeapon.h" />
+    <ClInclude Include="FileSystem.h" />
+    <ClInclude Include="Effect.h" />
+    <ClInclude Include="EffectManager.h" />
+    <ClInclude Include="FireBullet.h" />
+    <ClInclude Include="FlameProjector.h" />
+    <ClInclude Include="Floor.h" />
+    <ClInclude Include="Evasion.h" />
+    <ClInclude Include="FloorGrassS.h" />
+    <ClInclude Include="FloorGrassSE421553.h" />
+    <ClInclude Include="FloorGrassSW.h" />
+    <ClInclude Include="FloorGrassW.h" />
+    <ClInclude Include="FloorGrassW421566.h" />
+    <ClInclude Include="FloorHole421407.h" />
+    <ClInclude Include="FloorHole421573.h" />
+    <ClInclude Include="FloorHole421724.h" />
+    <ClInclude Include="FloorHole421777.h" />
+    <ClInclude Include="FloorSmall.h" />
+    <ClInclude Include="FloorSmall420592.h" />
+    <ClInclude Include="FloorSmall421201.h" />
+    <ClInclude Include="FloorSmall421410.h" />
+    <ClInclude Include="FloorSmall421572.h" />
+    <ClInclude Include="FloorSmall421575.h" />
+    <ClInclude Include="FloorSmall421723.h" />
+    <ClInclude Include="FloorSmall421733.h" />
+    <ClInclude Include="FloorTile.h" />
+    <ClInclude Include="GrassTile.h" />
+    <ClInclude Include="GunUI.h" />
+    <ClInclude Include="MoveCos.h" />
+    <ClInclude Include="MovePoint.h" />
+    <ClInclude Include="IInteractableTile.h" />
+    <ClInclude Include="Nub.h" />
+    <ClInclude Include="NubPilot.h" />
+    <ClInclude Include="HardPyramid.h" />
+    <ClInclude Include="HeartItem.h" />
+    <ClInclude Include="Hp.h" />
+    <ClInclude Include="IceBeamWeapon.h" />
+    <ClInclude Include="IceBullet.h" />
+    <ClInclude Include="IceTile.h" />
+    <ClInclude Include="ImImage.h" />
+    <ClInclude Include="ImInspector.h" />
+    <ClInclude Include="imconfig.h" />
+    <ClInclude Include="imgui.h" />
+    <ClInclude Include="imgui_impl_dx9.h" />
+    <ClInclude Include="imgui_impl_win32.h" />
+    <ClInclude Include="imgui_internal.h" />
+    <ClInclude Include="ImManager.h" />
+    <ClInclude Include="ImMenuBar.h" />
+    <ClInclude Include="ImTest.h" />
+    <ClInclude Include="ImWindow.h" />
+    <ClInclude Include="ItemManager.h" />
+    <ClInclude Include="LaserBullet.h" />
+    <ClInclude Include="LaserWeapon.h" />
+    <ClInclude Include="LoadingBackground.h" />
+    <ClInclude Include="Parabola.h" />
+    <ClInclude Include="NullFloorTile.h" />
+    <ClInclude Include="PlayerHitUI.h" />
+    <ClInclude Include="Portal.h" />
+    <ClInclude Include="RedLaserBullet.h" />
+    <ClInclude Include="LoadingScene.h" />
+    <ClInclude Include="MapObjectFactory.h" />
+    <ClInclude Include="MiniMapBack.h" />
+    <ClInclude Include="MiniGame.h" />
+    <ClInclude Include="MonsterFactory.h" />
+    <ClInclude Include="ImPickBox.h" />
+    <ClInclude Include="OnlyCollisionObj.h" />
+    <ClInclude Include="OnPlayer.h" />
+    <ClInclude Include="RootAttack.h" />
+    <ClInclude Include="SandWaterArc.h" />
+    <ClInclude Include="SandWaterFill.h" />
+    <ClInclude Include="SandWaterLine.h" />
+    <ClInclude Include="Scope.h" />
+    <ClInclude Include="SellItem.h" />
+    <ClInclude Include="Serializable.h" />
+    <ClInclude Include="RangeInPlayer.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="Jump.h" />
+    <ClInclude Include="LavaTile.h" />
+    <ClInclude Include="LeapJump.h" />
+    <ClInclude Include="Loading.h" />
+    <ClInclude Include="Logo.h" />
+    <ClInclude Include="LookAtTarget.h" />
+    <ClInclude Include="MainApp.h" />
+    <ClInclude Include="MapObj.h" />
+    <ClInclude Include="MiniMap.h" />
+    <ClInclude Include="MonoBehaviors.h" />
+    <ClInclude Include="Monster.h" />
+    <ClInclude Include="MoveLook.h" />
+    <ClInclude Include="MyEdit.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ImGui|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="NotCollisionWall.h" />
+    <ClInclude Include="NubBoss.h" />
+    <ClInclude Include="OilTile.h" />
+    <ClInclude Include="Pyramid.h" />
+    <ClInclude Include="QuickSandTile.h" />
+    <ClInclude Include="SandTile.h" />
+    <ClInclude Include="ShockWave.h" />
+    <ClInclude Include="ShopNpc.h" />
+    <ClInclude Include="Rub.h" />
+    <ClInclude Include="RapidWeapon.h" />
+    <ClInclude Include="ShortWall.h" />
+    <ClInclude Include="ShortWall420376.h" />
+    <ClInclude Include="ShortWall420588.h" />
+    <ClInclude Include="ShortWall420740.h" />
+    <ClInclude Include="ShortWall420954.h" />
+    <ClInclude Include="ShortWall421217.h" />
+    <ClInclude Include="ShortWall421405.h" />
+    <ClInclude Include="ShWallPipes420367ortWall.h" />
+    <ClInclude Include="SkillUI.h" />
+    <ClInclude Include="Slider.h" />
+    <ClInclude Include="RoomMgr.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ImGui|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="NormalBullet.h" />
+    <ClInclude Include="NormalWeapon.h" />
+    <ClInclude Include="CutSceneCamera.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="BulletMgr.h" />
+    <ClInclude Include="RandomLook.h" />
+    <ClInclude Include="RangeCheck.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Room.h" />
+    <ClInclude Include="Rush.h" />
+    <ClInclude Include="BootsItem.h" />
+    <ClInclude Include="SnowMan.h" />
+    <ClInclude Include="SnowSoTree.h" />
+    <ClInclude Include="SnowTile.h" />
+    <ClInclude Include="SnowTree.h" />
+    <ClInclude Include="SoftPyramid.h" />
+    <ClInclude Include="Cryder.h" />
+    <ClInclude Include="Sonic.h" />
+    <ClInclude Include="SonicBird.h" />
+    <ClInclude Include="SonicCloud.h" />
+    <ClInclude Include="SonicGame.h" />
+    <ClInclude Include="SonicGround.h" />
+    <ClInclude Include="SonicUI.h" />
+    <ClInclude Include="Speyeder.h" />
+    <ClInclude Include="SpreadShot.h" />
+    <ClInclude Include="SpreadWeapon.h" />
+    <ClInclude Include="SwampTile.h" />
+    <ClInclude Include="SwordBullet.h" />
+    <ClInclude Include="SwordWeapon.h" />
+    <ClInclude Include="TallGrass.h" />
+    <ClInclude Include="Tennel.h" />
+    <ClInclude Include="Tile.h" />
+    <ClInclude Include="TileFactory.h" />
+    <ClInclude Include="TimeInLimit.h" />
+    <ClInclude Include="Tree.h" />
+    <ClInclude Include="TreeBoss.h" />
+    <ClInclude Include="Turret.h" />
+    <ClInclude Include="UI.h" />
+    <ClInclude Include="UltimateUI.h" />
+    <ClInclude Include="VortexBullet.h" />
+    <ClInclude Include="Walker.h" />
+    <ClInclude Include="WalkerBoss.h" />
+    <ClInclude Include="Wall.h" />
+    <ClInclude Include="Stage.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Wait.h" />
+    <ClInclude Include="WallFactory.h" />
+    <ClInclude Include="WallLong.h" />
+    <ClInclude Include="WallLongDoor.h" />
+    <ClInclude Include="WallPanels.h" />
+    <ClInclude Include="WallPanels420377.h" />
+    <ClInclude Include="WallPanels420595.h" />
+    <ClInclude Include="WallPanels420744.h" />
+    <ClInclude Include="WallPanels420948.h" />
+    <ClInclude Include="WallPanels421219.h" />
+    <ClInclude Include="WallPanels421417.h" />
+    <ClInclude Include="WallPanels421568.h" />
+    <ClInclude Include="WallPanels421731.h" />
+    <ClInclude Include="WallPipes.h" />
+    <ClInclude Include="WallPipes420605.h" />
+    <ClInclude Include="WallPipes420745.h" />
+    <ClInclude Include="WallPipes420956.h" />
+    <ClInclude Include="Walls.h" />
+    <ClInclude Include="WallShort.h" />
+    <ClInclude Include="WallShortDoor.h" />
+    <ClInclude Include="WallSpecial.h" />
+    <ClInclude Include="WallSpecial420366.h" />
+    <ClInclude Include="WallSpecial420600.h" />
+    <ClInclude Include="WallSpecial420730.h" />
+    <ClInclude Include="WallSpecial420958.h" />
+    <ClInclude Include="WallSpecial421565.h" />
+    <ClInclude Include="WallTile.h" />
+    <ClInclude Include="WallVent.h" />
+    <ClInclude Include="WallVent420375.h" />
+    <ClInclude Include="WallVent420596.h" />
+    <ClInclude Include="WallVent420738.h" />
+    <ClInclude Include="WallVent420952.h" />
+    <ClInclude Include="WallVent421863.h" />
+    <ClInclude Include="WaterTile.h" />
+    <ClInclude Include="Weapon.h" />
+    <ClInclude Include="WeaponItem.h" />
+    <ClInclude Include="WeaponType.h" />
+    <ClInclude Include="WormBody.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="WormHead.h" />
+    <ClInclude Include="WormMoveCtrl.h" />
+    <ClInclude Include="WormTail.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Attack.cpp" />
+    <ClCompile Include="AttackToPlayer.cpp" />
+    <ClCompile Include="BackGround.cpp" />
+    <ClCompile Include="BackJump.cpp" />
+    <ClCompile Include="Baller.cpp" />
+    <ClCompile Include="BeltTile.cpp" />
+    <ClCompile Include="BigJump.cpp" />
+    <ClCompile Include="Bird.cpp" />
+    <ClCompile Include="BloodTile.cpp" />
+    <ClCompile Include="BoolCheck.cpp" />
+    <ClCompile Include="BossHp.cpp" />
+    <ClCompile Include="Bub.cpp" />
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="BulletBar.cpp" />
+    <ClCompile Include="BulletGauge.cpp" />
+    <ClCompile Include="BulletItem.cpp" />
+    <ClCompile Include="Cactus.cpp" />
+    <ClCompile Include="Cactus1.cpp" />
+    <ClCompile Include="Cactus2.cpp" />
+    <ClCompile Include="Cactus3.cpp" />
+    <ClCompile Include="Cactus4.cpp" />
+    <ClCompile Include="Cactus5.cpp" />
+    <ClCompile Include="Calculator.cpp" />
+    <ClCompile Include="CheckPoint.cpp" />
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Coin.cpp" />
+    <ClCompile Include="CoinItem.cpp" />
+    <ClCompile Include="CoolTime.cpp" />
+    <ClCompile Include="CrossHair.cpp" />
+    <ClCompile Include="CutSceneUI.cpp" />
+    <ClCompile Include="CutSceneCheck.cpp" />
+    <ClCompile Include="DeadCheck.cpp" />
+    <ClCompile Include="DecoratorTile.cpp" />
+    <ClCompile Include="EndingBackground.cpp" />
+    <ClCompile Include="FloorBeltCorner.cpp" />
+    <ClCompile Include="FloorLarge.cpp" />
+    <ClCompile Include="FloorLarge421204.cpp" />
+    <ClCompile Include="FloorLarge421409.cpp" />
+    <ClCompile Include="FloorLarge421559.cpp" />
+    <ClCompile Include="FloorLarge421721.cpp" />
+    <ClCompile Include="FloorLarge421865.cpp" />
+    <ClCompile Include="FloorLarge421871.cpp" />
+    <ClCompile Include="FloorLarge421874.cpp" />
+    <ClCompile Include="FloorStripes.cpp" />
+    <ClCompile Include="FloorVent.cpp" />
+    <ClCompile Include="FloorVent420959.cpp" />
+    <ClCompile Include="FloorVent421222.cpp" />
+    <ClCompile Include="FloorVent421406.cpp" />
+    <ClCompile Include="FloorVent421556.cpp" />
+    <ClCompile Include="FloorVent421725.cpp" />
+    <ClCompile Include="FloorVent421869.cpp" />
+    <ClCompile Include="Guppi.cpp" />
+    <ClCompile Include="ListBox.cpp" />
+    <ClCompile Include="Lizard.cpp" />
+    <ClCompile Include="LookAtPlayer.cpp" />
+    <ClCompile Include="MiniGuppi.cpp" />
+    <ClCompile Include="MoveUp.cpp" />
+    <ClCompile Include="MoveY.cpp" />
+    <ClCompile Include="Disc.cpp" />
+    <ClCompile Include="DiscItem.cpp" />
+    <ClCompile Include="Door.cpp" />
+    <ClCompile Include="EditCamera.cpp" />
+    <ClCompile Include="ElectricTile.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyBullet.cpp" />
+    <ClCompile Include="Evasioner.cpp" />
+    <ClCompile Include="Factory.cpp" />
+    <ClCompile Include="ExplosiveWeapon.cpp" />
+    <ClCompile Include="FileSystem.cpp" />
+    <ClCompile Include="Effect.cpp" />
+    <ClCompile Include="EffectManager.cpp" />
+    <ClCompile Include="FireBullet.cpp" />
+    <ClCompile Include="FlameProjector.cpp" />
+    <ClCompile Include="Floor.cpp" />
+    <ClCompile Include="Evasion.cpp" />
+    <ClCompile Include="FloorGrassS.cpp" />
+    <ClCompile Include="FloorGrassSE421553.cpp" />
+    <ClCompile Include="FloorGrassSW.cpp" />
+    <ClCompile Include="FloorGrassW.cpp" />
+    <ClCompile Include="FloorGrassW421566.cpp" />
+    <ClCompile Include="FloorHole421407.cpp" />
+    <ClCompile Include="FloorHole421573.cpp" />
+    <ClCompile Include="FloorHole421724.cpp" />
+    <ClCompile Include="FloorHole421777.cpp" />
+    <ClCompile Include="FloorSmall.cpp" />
+    <ClCompile Include="FloorSmall420592.cpp" />
+    <ClCompile Include="FloorSmall421201.cpp" />
+    <ClCompile Include="FloorSmall421410.cpp" />
+    <ClCompile Include="FloorSmall421572.cpp" />
+    <ClCompile Include="FloorSmall421575.cpp" />
+    <ClCompile Include="FloorSmall421723.cpp" />
+    <ClCompile Include="FloorSmall421733.cpp" />
+    <ClCompile Include="FloorTile.cpp" />
+    <ClCompile Include="GrassTile.cpp" />
+    <ClCompile Include="GunUI.cpp" />
+    <ClCompile Include="MoveCos.cpp" />
+    <ClCompile Include="MovePoint.cpp" />
+    <ClCompile Include="Nub.cpp" />
+    <ClCompile Include="NubPilot.cpp" />
+    <ClCompile Include="HardPyramid.cpp" />
+    <ClCompile Include="HeartItem.cpp" />
+    <ClCompile Include="Hp.cpp" />
+    <ClCompile Include="IceBeamWeapon.cpp" />
+    <ClCompile Include="IceBullet.cpp" />
+    <ClCompile Include="IceTile.cpp" />
+    <ClCompile Include="ImGuiFileDialog.cpp" />
+    <ClCompile Include="ImImage.cpp" />
+    <ClCompile Include="ImInspector.cpp" />
+    <ClCompile Include="imgui.cpp" />
+    <ClCompile Include="imgui_demo.cpp" />
+    <ClCompile Include="imgui_draw.cpp" />
+    <ClCompile Include="imgui_impl_dx9.cpp" />
+    <ClCompile Include="imgui_impl_win32.cpp" />
+    <ClCompile Include="imgui_tables.cpp" />
+    <ClCompile Include="imgui_widgets.cpp" />
+    <ClCompile Include="ImManager.cpp" />
+    <ClCompile Include="ImMenuBar.cpp" />
+    <ClCompile Include="ImTest.cpp" />
+    <ClCompile Include="ImWindow.cpp" />
+    <ClCompile Include="Portal.cpp" />
+    <ClCompile Include="RangeInPlayer.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="ItemManager.cpp" />
+    <ClCompile Include="Jump.cpp" />
+    <ClCompile Include="LaserBullet.cpp" />
+    <ClCompile Include="LaserWeapon.cpp" />
+    <ClCompile Include="Parabola.cpp" />
+    <ClCompile Include="NullFloorTile.cpp" />
+    <ClCompile Include="PlayerHitUI.cpp" />
+    <ClCompile Include="RedLaserBullet.cpp" />
+    <ClCompile Include="LavaTile.cpp" />
+    <ClCompile Include="LeapJump.cpp" />
+    <ClCompile Include="Loading.cpp" />
+    <ClCompile Include="LoadingBackground.cpp" />
+    <ClCompile Include="LoadingScene.cpp" />
+    <ClCompile Include="Logo.cpp" />
+    <ClCompile Include="LookAtTarget.cpp" />
+    <ClCompile Include="MainApp.cpp" />
+    <ClCompile Include="MapObj.cpp" />
+    <ClCompile Include="MapObjectFactory.cpp" />
+    <ClCompile Include="MiniGame.cpp" />
+    <ClCompile Include="MiniMap.cpp" />
+    <ClCompile Include="MiniMapBack.cpp" />
+    <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="MonsterFactory.cpp" />
+    <ClCompile Include="MoveLook.cpp" />
+    <ClCompile Include="MyEdit.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ImGui|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="NotCollisionWall.cpp" />
+    <ClCompile Include="NubBoss.cpp" />
+    <ClCompile Include="OilTile.cpp" />
+    <ClCompile Include="ImPickBox.cpp" />
+    <ClCompile Include="OnlyCollisionObj.cpp" />
+    <ClCompile Include="OnPlayer.cpp" />
+    <ClCompile Include="Pyramid.cpp" />
+    <ClCompile Include="QuickSandTile.cpp" />
+    <ClCompile Include="RootAttack.cpp" />
+    <ClCompile Include="SandTile.cpp" />
+    <ClCompile Include="SandWaterArc.cpp" />
+    <ClCompile Include="SandWaterFill.cpp" />
+    <ClCompile Include="SandWaterLine.cpp" />
+    <ClCompile Include="Scope.cpp" />
+    <ClCompile Include="SellItem.cpp" />
+    <ClCompile Include="ShockWave.cpp" />
+    <ClCompile Include="ShopNpc.cpp" />
+    <ClCompile Include="Rub.cpp" />
+    <ClCompile Include="RapidWeapon.cpp" />
+    <ClCompile Include="ShortWall.cpp" />
+    <ClCompile Include="ShortWall420376.cpp" />
+    <ClCompile Include="ShortWall420588.cpp" />
+    <ClCompile Include="ShortWall420740.cpp" />
+    <ClCompile Include="ShortWall420954.cpp" />
+    <ClCompile Include="ShortWall421217.cpp" />
+    <ClCompile Include="ShortWall421405.cpp" />
+    <ClCompile Include="ShWallPipes420367ortWall.cpp" />
+    <ClCompile Include="SkillUI.cpp" />
+    <ClCompile Include="Slider.cpp" />
+    <ClCompile Include="RoomMgr.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ImGui|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="NormalBullet.cpp" />
+    <ClCompile Include="NormalWeapon.cpp" />
+    <ClCompile Include="CutSceneCamera.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="BulletMgr.cpp" />
+    <ClCompile Include="RangeCheck.cpp" />
+    <ClCompile Include="Room.cpp" />
+    <ClCompile Include="RandomLook.cpp" />
+    <ClCompile Include="Rush.cpp" />
+    <ClCompile Include="BootsItem.cpp" />
+    <ClCompile Include="SnowMan.cpp" />
+    <ClCompile Include="SnowSoTree.cpp" />
+    <ClCompile Include="SnowTile.cpp" />
+    <ClCompile Include="SnowTree.cpp" />
+    <ClCompile Include="SoftPyramid.cpp" />
+    <ClCompile Include="Cryder.cpp" />
+    <ClCompile Include="Sonic.cpp" />
+    <ClCompile Include="SonicBird.cpp" />
+    <ClCompile Include="SonicCloud.cpp" />
+    <ClCompile Include="SonicGame.cpp" />
+    <ClCompile Include="SonicGround.cpp" />
+    <ClCompile Include="SonicUI.cpp" />
+    <ClCompile Include="Speyeder.cpp" />
+    <ClCompile Include="SpreadShot.cpp" />
+    <ClCompile Include="SpreadWeapon.cpp" />
+    <ClCompile Include="Stage.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ImGui|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SwampTile.cpp" />
+    <ClCompile Include="SwordBullet.cpp" />
+    <ClCompile Include="SwordWeapon.cpp" />
+    <ClCompile Include="TallGrass.cpp" />
+    <ClCompile Include="Tennel.cpp" />
+    <ClCompile Include="Tile.cpp" />
+    <ClCompile Include="TileFactory.cpp" />
+    <ClCompile Include="TimeInLimit.cpp" />
+    <ClCompile Include="Tree.cpp" />
+    <ClCompile Include="TreeBoss.cpp" />
+    <ClCompile Include="Turret.cpp" />
+    <ClCompile Include="UI.cpp" />
+    <ClCompile Include="UltimateUI.cpp" />
+    <ClCompile Include="VortexBullet.cpp" />
+    <ClCompile Include="Walker.cpp" />
+    <ClCompile Include="WalkerBoss.cpp" />
+    <ClCompile Include="Wall.cpp" />
+    <ClCompile Include="Wait.cpp" />
+    <ClCompile Include="WallFactory.cpp" />
+    <ClCompile Include="WallLong.cpp" />
+    <ClCompile Include="WallLongDoor.cpp" />
+    <ClCompile Include="WallPanels.cpp" />
+    <ClCompile Include="WallPanels420377.cpp" />
+    <ClCompile Include="WallPanels420595.cpp" />
+    <ClCompile Include="WallPanels420744.cpp" />
+    <ClCompile Include="WallPanels420948.cpp" />
+    <ClCompile Include="WallPanels421219.cpp" />
+    <ClCompile Include="WallPanels421417.cpp" />
+    <ClCompile Include="WallPanels421568.cpp" />
+    <ClCompile Include="WallPanels421731.cpp" />
+    <ClCompile Include="WallPipes.cpp" />
+    <ClCompile Include="WallPipes420605.cpp" />
+    <ClCompile Include="WallPipes420745.cpp" />
+    <ClCompile Include="WallPipes420956.cpp" />
+    <ClCompile Include="Walls.cpp" />
+    <ClCompile Include="WallShort.cpp" />
+    <ClCompile Include="WallShortDoor.cpp" />
+    <ClCompile Include="WallSpecial.cpp" />
+    <ClCompile Include="WallSpecial420366.cpp" />
+    <ClCompile Include="WallSpecial420600.cpp" />
+    <ClCompile Include="WallSpecial420730.cpp" />
+    <ClCompile Include="WallSpecial420958.cpp" />
+    <ClCompile Include="WallSpecial421565.cpp" />
+    <ClCompile Include="WallTile.cpp" />
+    <ClCompile Include="WallVent.cpp" />
+    <ClCompile Include="WallVent420375.cpp" />
+    <ClCompile Include="WallVent420596.cpp" />
+    <ClCompile Include="WallVent420738.cpp" />
+    <ClCompile Include="WallVent420952.cpp" />
+    <ClCompile Include="WallVent421863.cpp" />
+    <ClCompile Include="WaterTile.cpp" />
+    <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="WeaponItem.cpp" />
+    <ClCompile Include="WeaponType.cpp" />
+    <ClCompile Include="WormBody.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="WormHead.cpp" />
+    <ClCompile Include="WormMoveCtrl.cpp" />
+    <ClCompile Include="WormTail.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgui.natstepfilter" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="imgui.natvis" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

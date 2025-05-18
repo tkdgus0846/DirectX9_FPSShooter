@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Base.h">
+      <Filter>Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="Enum.h">
+      <Filter>Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="Export_Function.h">
+      <Filter>Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="Export_System.h">
+      <Filter>Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="Export_Utility.h">
+      <Filter>Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="Include.h">
+      <Filter>Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyBox.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Typedef.h">
+      <Filter>Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="Struct.h">
+      <Filter>Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="Layer.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Management.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Function.h">
+      <Filter>Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Component\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicDev.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="CubeTex.h">
+      <Filter>Component\VIBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="RcCol.h">
+      <Filter>Component\VIBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="RcTex.h">
+      <Filter>Component\VIBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="TriCol.h">
+      <Filter>Component\VIBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="VIBuffer.h">
+      <Filter>Component\VIBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Firework.h">
+      <Filter>Component\ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Snow.h">
+      <Filter>Component\ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Component\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Component\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="DInputMgr.h">
+      <Filter>Manager\InputMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="FontMgr.h">
+      <Filter>Manager\FontMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFont.h">
+      <Filter>Manager\FontMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Frame.h">
+      <Filter>Manager\TimerMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameMgr.h">
+      <Filter>Manager\TimerMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Manager\TimerMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="TimerMgr.h">
+      <Filter>Manager\TimerMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="ProtoMgr.h">
+      <Filter>Manager\ProtoMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Rigidbody.h">
+      <Filter>Component\Rigidbody</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraMgr.h">
+      <Filter>Manager\CameraMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Calculator.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="RoomTex.h">
+      <Filter>Component\VIBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Component\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Manager\LightMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="LightMgr.h">
+      <Filter>Manager\LightMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Behavior.h">
+      <Filter>Component\Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="Selector.h">
+      <Filter>Component\Behavior\Selector</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence.h">
+      <Filter>Component\Behavior\Sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackBoard.h">
+      <Filter>Component\Behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="Root.h">
+      <Filter>Component\Behavior\Root</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Manager\MaterialMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="MaterialMgr.h">
+      <Filter>Manager\MaterialMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Component\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="CubeCol.h">
+      <Filter>Component\VIBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionMgr.h">
+      <Filter>Manager\CollisionMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="FloorTex.h">
+      <Filter>Component\VIBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="WallTex.h">
+      <Filter>Component\VIBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="PickingSphere.h">
+      <Filter>Component\UIComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="Creature.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="FrustrumNormalTex.h">
+      <Filter>Component\VIBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="SmokeParticle.h">
+      <Filter>Component\ParticleSystem\SmokeParticles</Filter>
+    </ClInclude>
+    <ClInclude Include="JumpSmokeParticle.h">
+      <Filter>Component\ParticleSystem\SmokeParticles</Filter>
+    </ClInclude>
+    <ClInclude Include="RunSmokeParticle.h">
+      <Filter>Component\ParticleSystem\SmokeParticles</Filter>
+    </ClInclude>
+    <ClInclude Include="UpSmokeParticle.h">
+      <Filter>Component\ParticleSystem\SmokeParticles</Filter>
+    </ClInclude>
+    <ClInclude Include="VortexParticle.h">
+      <Filter>Component\ParticleSystem\BulletParticles</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureParticle.h">
+      <Filter>Component\ParticleSystem\ParticleSystem_Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorParticle.h">
+      <Filter>Component\ParticleSystem\ParticleSystem_Color</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalBulletParticle.h">
+      <Filter>Component\ParticleSystem\BulletParticles</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSystem.h">
+      <Filter>Component\ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleMgr.h">
+      <Filter>Manager\ParticleMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="PyramidDestoryParticle.h">
+      <Filter>Component\ParticleSystem\ObjectParticles</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundMgr.h">
+      <Filter>Manager\SoundMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="SandDigParticle.h">
+      <Filter>Component\ParticleSystem\SandParticles</Filter>
+    </ClInclude>
+    <ClInclude Include="SandStorm.h">
+      <Filter>Component\ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="VentParticle.h">
+      <Filter>Component\ParticleSystem\VentParticles</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Component.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyBox.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Management.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Layer.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Reference</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Component\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicDev.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="CubeTex.cpp">
+      <Filter>Component\VIBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="RcCol.cpp">
+      <Filter>Component\VIBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="RcTex.cpp">
+      <Filter>Component\VIBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="TriCol.cpp">
+      <Filter>Component\VIBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="VIBuffer.cpp">
+      <Filter>Component\VIBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Firework.cpp">
+      <Filter>Component\ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Snow.cpp">
+      <Filter>Component\ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>Component\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Component\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="DInputMgr.cpp">
+      <Filter>Manager\InputMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="FontMgr.cpp">
+      <Filter>Manager\FontMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="MyFont.cpp">
+      <Filter>Manager\FontMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Frame.cpp">
+      <Filter>Manager\TimerMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameMgr.cpp">
+      <Filter>Manager\TimerMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Manager\TimerMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="TimerMgr.cpp">
+      <Filter>Manager\TimerMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="ProtoMgr.cpp">
+      <Filter>Manager\ProtoMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Rigidbody.cpp">
+      <Filter>Component\Rigidbody</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraMgr.cpp">
+      <Filter>Manager\CameraMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Calculator.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="RoomTex.cpp">
+      <Filter>Component\VIBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Component\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Manager\LightMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="LightMgr.cpp">
+      <Filter>Manager\LightMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Behavior.cpp">
+      <Filter>Component\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Selector.cpp">
+      <Filter>Component\Behavior\Selector</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence.cpp">
+      <Filter>Component\Behavior\Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackBoard.cpp">
+      <Filter>Component\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Root.cpp">
+      <Filter>Component\Behavior\Root</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Manager\MaterialMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="MaterialMgr.cpp">
+      <Filter>Manager\MaterialMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Component\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="CubeCol.cpp">
+      <Filter>Component\VIBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionMgr.cpp">
+      <Filter>Manager\CollisionMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="FloorTex.cpp">
+      <Filter>Component\VIBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="WallTex.cpp">
+      <Filter>Component\VIBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="PickingSphere.cpp">
+      <Filter>Component\UIComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="Creature.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="FrustrumNormalTex.cpp">
+      <Filter>Component\VIBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="SmokeParticle.cpp">
+      <Filter>Component\ParticleSystem\SmokeParticles</Filter>
+    </ClCompile>
+    <ClCompile Include="JumpSmokeParticle.cpp">
+      <Filter>Component\ParticleSystem\SmokeParticles</Filter>
+    </ClCompile>
+    <ClCompile Include="RunSmokeParticle.cpp">
+      <Filter>Component\ParticleSystem\SmokeParticles</Filter>
+    </ClCompile>
+    <ClCompile Include="UpSmokeParticle.cpp">
+      <Filter>Component\ParticleSystem\SmokeParticles</Filter>
+    </ClCompile>
+    <ClCompile Include="VortexParticle.cpp">
+      <Filter>Component\ParticleSystem\BulletParticles</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureParticle.cpp">
+      <Filter>Component\ParticleSystem\ParticleSystem_Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorParticle.cpp">
+      <Filter>Component\ParticleSystem\ParticleSystem_Color</Filter>
+    </ClCompile>
+    <ClCompile Include="NormalBulletParticle.cpp">
+      <Filter>Component\ParticleSystem\BulletParticles</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSystem.cpp">
+      <Filter>Component\ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Particle.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleMgr.cpp">
+      <Filter>Manager\ParticleMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="PyramidDestoryParticle.cpp">
+      <Filter>Component\ParticleSystem\ObjectParticles</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundMgr.cpp">
+      <Filter>Manager\SoundMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="SandDigParticle.cpp">
+      <Filter>Component\ParticleSystem\SandParticles</Filter>
+    </ClCompile>
+    <ClCompile Include="SandStorm.cpp">
+      <Filter>Component\ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="VentParticle.cpp">
+      <Filter>Component\ParticleSystem\VentParticles</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Base.inl">
+      <Filter>Reference</Filter>
+    </None>
+    <None Include="Export_System.inl">
+      <Filter>Reference</Filter>
+    </None>
+    <None Include="Export_Utility.inl">
+      <Filter>Reference</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{762f7423-f0af-47e2-b111-5b95cf282be2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{a9a6cae6-55df-4998-8162-6add0c2121cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Reference">
+      <UniqueIdentifier>{861937ba-68a7-4f68-926e-ade248cc7386}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{18f0efa2-d6ec-43ea-a20b-62f879697839}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\CollisionMgr">
+      <UniqueIdentifier>{94e84c0d-baa8-42ea-b5f4-74fdeb443fb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\InputMgr">
+      <UniqueIdentifier>{c6d3e922-c22e-4571-bbf4-10a967944300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\FontMgr">
+      <UniqueIdentifier>{fb63a2ab-90a9-4042-b031-5d5f5103fe0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\TimerMgr">
+      <UniqueIdentifier>{d3e77d95-b25c-48c5-8341-0b7d1cd96823}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\ProtoMgr">
+      <UniqueIdentifier>{9390663d-146d-4aec-b311-0f86e79be166}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\LightMgr">
+      <UniqueIdentifier>{03a779a1-89ab-427a-8a24-08ff54f59ae1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{f61d561a-522d-49e9-b924-0a38e62a3ee9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Camera">
+      <UniqueIdentifier>{065bbc3e-0e6e-47fa-a149-ffd0a512d54c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\ParticleSystem">
+      <UniqueIdentifier>{57b55658-92fb-4281-bd32-840a79a5aba0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Collider">
+      <UniqueIdentifier>{22b78abf-07fe-4458-b091-6c9fa6f830b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Texture">
+      <UniqueIdentifier>{3923373d-3387-4c2b-b8fe-d8d82a24d934}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Transform">
+      <UniqueIdentifier>{5863d0d2-b596-4b09-94e2-85040dd09eed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Rigidbody">
+      <UniqueIdentifier>{75c32bce-c51b-4c0f-a13e-1f9a8ba0489a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Mesh">
+      <UniqueIdentifier>{b8aaf3e3-df2d-47b7-94b4-4ec1c66b425e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\CameraMgr">
+      <UniqueIdentifier>{8837ae5c-4dfc-4814-b3ed-37a6340a1005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Behavior">
+      <UniqueIdentifier>{66da9a20-2280-4ea1-987e-b689ced50831}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Behavior\Selector">
+      <UniqueIdentifier>{608ea136-afea-4a90-8d29-73ac48f955f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Behavior\Sequence">
+      <UniqueIdentifier>{11bb1771-9fea-4ac7-b055-25367485050d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Behavior\Root">
+      <UniqueIdentifier>{90eddf15-2023-4e27-92fb-173d9293a4ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\MaterialMgr">
+      <UniqueIdentifier>{47b38da4-3ed4-4dc5-b86e-9fc1469f1b1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Animation">
+      <UniqueIdentifier>{18c6d12c-4c88-4d42-b9d6-ba23e3ab4e0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\VIBuffer">
+      <UniqueIdentifier>{15a5e433-be7a-4eb4-86ff-ab48e69ea59f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\UIComponent">
+      <UniqueIdentifier>{01ceebb4-0a9e-4d59-bd77-bcc5daffd18c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\ParticleSystem\SmokeParticles">
+      <UniqueIdentifier>{9f76f5c6-ceb0-47b7-8b7c-e7cc4b9907c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\ParticleSystem\ParticleSystem_Texture">
+      <UniqueIdentifier>{865b6618-f282-43f1-80c4-8bfcabd9b493}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\ParticleSystem\ParticleSystem_Color">
+      <UniqueIdentifier>{e20c17a0-2c5d-48b7-8c9f-3a60e952191d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\ParticleMgr">
+      <UniqueIdentifier>{327c178d-12d2-4f55-848c-4205c3f6cdc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\ParticleSystem\ObjectParticles">
+      <UniqueIdentifier>{858baa2f-9d7a-4bd9-8138-bc98c52a2532}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\ParticleSystem\BulletParticles">
+      <UniqueIdentifier>{31aaaa75-2907-47ea-a925-434355a0abad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\SoundMgr">
+      <UniqueIdentifier>{4fc3040c-ae28-483f-8372-b3c3d7b42cba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\ParticleSystem\SandParticles">
+      <UniqueIdentifier>{51b59956-d973-4b03-94e1-1f0a7ea9ea92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\ParticleSystem\VentParticles">
+      <UniqueIdentifier>{6afe8bf5-c1b0-4f4e-9c33-eec61b7cc44c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
